@@ -26,6 +26,8 @@ The output for the image should appear. To check if the container is running:
 Nothing is listed, then look for containers that have been closed:  
 ~$ `docker ps -a`{{execute}}
 
+Every time an object gets instantiated, it will be assigned a new id (**alphanumeric**, **12 characters**), and a readable name (`name1_name2`). Usually you would prefer using the readable name for management.
+
 ## Useful commands in Docker
 
 **Note**: Expect common commands like `ps`, `top`, `exec` to appear in similar contexts under Docker.
@@ -41,20 +43,3 @@ Check configuration json for a specific instance:
 
 Check logs for an instance:
 `docker logs <name>`
-
-### Docker instance control commands
-
-Run a docker container for `node` image (if it hasn't been found locally, it will automatically `pull`):
-`docker run -t node`{{execute}}
-
-Every time an object gets instantiated, it will be assigned a new id (**alphanumeric**, **12 characters**), and a readable name (`name1_name2`). Usually you would prefer using the readable name for management.
-
-Start a previously instantiated container (run has been done before, that container is found in `docker ps -a`):
-`docker run -t hello-world`{{execute}}
-`docker start <name>`
-
-Connect to a container (attach a bash to the docker instance and login):
-`docker exec -it <name> bash`
-
-Stop a currently active container (container is listed in `docker ps`):
-`docker stop <name>`

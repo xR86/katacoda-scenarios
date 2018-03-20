@@ -1,8 +1,23 @@
 
 ## Useful commands in Docker
 
----
-### General wrappers for classic Linux commands
+## Docker control commands
+
+Run a docker container for `node` image (if it hasn't been found locally, it will automatically `pull`):
+`docker run -t node`{{execute}}
+
+Start a previously instantiated container (run has been done before, that container is found in `docker ps -a`):
+`docker run -t hello-world`{{execute}}
+`docker start <name>`
+
+Connect to a container (attach a bash to the docker instance and login):
+`docker exec -it <name> bash`
+
+Stop a currently active container (container is listed in `docker ps`):
+`docker stop <name>`
+
+
+## Wrappers for classic Linux commands
 
 Check running containers:
 `docker ps`{{execute}}

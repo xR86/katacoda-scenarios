@@ -49,5 +49,6 @@ web:
     PORT: 3000
 ```
 
-<!-- ### Docker Compose -->
+Docker compose takes Docker configuration one step further, by defining multiple docker images and their orchestration in one file.
 
+Docker Compose stands at the base of Docker Swarm.
